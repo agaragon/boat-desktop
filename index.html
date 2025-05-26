@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Boat - Kubernetes Manager</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Clusters (Contexts)</h2>
+            <select id="context-select" size="10"></select>
+
+            <h2>Pods</h2>
+            <div id="pod-list">
+                <p>Select a cluster to view pods.</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>Pod Terminal</h2>
+            <div id="terminal-container">
+                <p>Select a pod and click 'Open Terminal' to start.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="error-display" class="error-message" style="display: none;"></div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
